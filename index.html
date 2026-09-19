@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHELLAKANI STORE | Vanapuram</title>
+<meta name="description" content="Chellakani Store - Grocery Store at Thachempattu Road, Vanapuram, Tamil Nadu 606753.">
+<style>
+:root{--primary:#159c4d;--secondary:#f4b400;--dark:#10251a;--light:#f6faf7;--white:#fff;--muted:#65736b;--shadow:0 12px 30px rgba(16,37,26,.10)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--light);color:var(--dark);line-height:1.6}
+a{text-decoration:none;color:inherit}
+button{font:inherit;cursor:pointer;border:0}
+.container{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 2px 15px rgba(0,0,0,.07)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.15rem;color:var(--primary)}
+.logo-icon{width:43px;height:43px;border-radius:13px;background:var(--primary);color:#fff;display:grid;place-items:center;font-size:22px}
+.nav-links{display:flex;gap:25px;font-weight:700}
+.nav-links a:hover{color:var(--primary)}
+.menu-btn{display:none;background:var(--primary);color:#fff;padding:9px 12px;border-radius:9px}
+.hero{background:linear-gradient(135deg,#e9f8ed,#fff8df);padding:75px 0 65px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:45px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:#fff;padding:8px 14px;border-radius:999px;box-shadow:var(--shadow);font-weight:800;color:var(--primary);margin-bottom:18px}
+h1{font-size:clamp(2.5rem,6vw,4.7rem);line-height:1.03;margin-bottom:20px}
+h1 span{color:var(--primary)}
+.hero p{font-size:1.08rem;color:var(--muted);max-width:650px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:13px 20px;border-radius:12px;font-weight:800;display:inline-flex;align-items:center;gap:8px;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-secondary{background:#fff;border:1px solid #dbe6de}
+.store-card{background:#fff;border-radius:28px;padding:30px;box-shadow:0 25px 60px rgba(23,107,58,.16);text-align:center}
+.store-emoji{font-size:100px;margin:10px}
+.rating{font-size:1.2rem;font-weight:900;color:#d88d00}
+.rating span{color:#555;font-size:.95rem;font-weight:600}
+section{padding:72px 0}
+.section-title{text-align:center;margin-bottom:38px}
+.section-title h2{font-size:2.2rem;margin-bottom:8px}
+.section-title p{color:var(--muted)}
+.info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.info{background:#fff;padding:24px;border-radius:18px;box-shadow:var(--shadow)}
+.info-icon{font-size:30px;margin-bottom:10px}
+.info h3{font-size:1rem;margin-bottom:5px}.info p{color:var(--muted);font-size:.94rem}
+.products{background:#fff}
+.search-box{max-width:650px;margin:0 auto 30px;position:relative}
+.search-box input{width:100%;padding:16px 20px;border:1px solid #d8e3dc;border-radius:14px;outline:none;font-size:1rem}
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.product{background:var(--light);border:1px solid #e2ebe5;border-radius:18px;padding:18px;transition:.2s}
+.product:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.product-img{height:130px;border-radius:14px;background:#fff;display:grid;place-items:center;font-size:58px;margin-bottom:14px}
+.product h3{margin-bottom:5px}.product p{color:var(--muted);font-size:.9rem}
+.product-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:14px}
+.price{font-weight:900;color:var(--primary)}
+.add{background:var(--primary);color:#fff;border-radius:9px;padding:8px 12px;font-weight:800}
+.reviews{background:#edf7f0}
+.review-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.review{background:#fff;padding:25px;border-radius:18px;box-shadow:var(--shadow)}
+.stars{color:#f3ae00;letter-spacing:2px;margin-bottom:8px}
+.review p{color:#4f5d55}.review strong{display:block;margin-top:12px}
+.location-card{display:grid;grid-template-columns:1fr 1fr;gap:25px;text-align: center;}
+.address{background:var(--dark);color:#fff;padding:35px;border-radius:24px}
+.address p{color:#d2ddd6;margin:10px 0 20px; text-align: center;}
+.map{min-height:300px;border-radius:24px;background:linear-gradient(135deg,#d9eadf,#c6dfcc);display:grid;place-items:center;text-align:center;padding:25px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gallery-item{height:230px;border-radius:20px;background:linear-gradient(135deg,#dfeee3,#fff2c7);display:grid;place-items:center;font-size:65px;box-shadow:var(--shadow)}
+footer{background:#0c1d13;color:#dbe8df;padding:38px 0}
+.footer-grid{display:flex;justify-content:space-between;gap:25px;align-items:center}
+footer strong{color:#fff;font-size:1.2rem}
+.cart{position:fixed;right:22px;bottom:22px;z-index:1100;background:var(--secondary);color:#1e260e;padding:15px 18px;border-radius:999px;font-weight:900;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+.cart-count{background:#111;color:#fff;padding:2px 7px;border-radius:50%;margin-left:5px}
+.toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,120px);background:#10251a;color:#fff;padding:13px 20px;border-radius:10px;z-index:2000;transition:.3s}
+.toast.show{transform:translate(-50%,0)}
+@media(max-width:900px){.hero-grid,.location-card{grid-template-columns:1fr}.info-grid{grid-template-columns:repeat(2,1fr)}.product-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;padding:20px;flex-direction:column;box-shadow:0 10px 20px #0001}.nav-links.open{display:flex}.menu-btn{display:block}.info-grid,.product-grid,.review-grid,.gallery{grid-template-columns:1fr 1fr}.gallery-item{height:170px}.footer-grid{flex-direction:column;align-items:flex-start}}
+@media(max-width:450px){.info-grid,.product-grid,.review-grid,.gallery{grid-template-columns:1fr}h1{font-size:2.7rem}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container nav">
+<a class="logo" href="#home"><div class="logo-icon">🛒</div>CHELLAKANI STORE </a>
+<nav class="nav-links" id="navLinks">
+<a href="#home">Home</a><a href="#storeinfo">Store Information</a><a href="#products">Products</a><a href="#reviews">Reviews</a><a href="#location">Location</a><a href="#contact">Contact</a>
+</nav>
+
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+</div>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="container hero-grid">
+<div>
+<div class="badge">⭐ 4.9 Rating for Reviews</div>
+<h1>Your Local <span>Grocery Store</span> in Vanapuram</h1>
+<p>Welcome to <strong>CHELLAKANI STORE</strong> — Your convenient neighborhood grocery store on Thachempattu Road, Vanapuram. Quality products and friendly service for your everyday needs.</p>
+<div class="actions">
+<a class="btn btn-primary" href="#products">🛒 Explore Products</a>
+<a class="btn btn-secondary" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Chellakani+Store%2C+Thachempattu+Road%2C+Vanapuram%2C+Tamil+Nadu+606753">📍 Get Directions</a>
+</div>
+</div>
+<div class="store-card">
+<div class="store-emoji"><img src="store.png" width="100px" height="100px"></div>
+<h2>CHELLAKANI STORE</h2>
+<p>Thachempattu Road · Vanapuram</p>
+<div class="rating">★★★★★ <span>4.9(Rating)</span></div>
+<p style="margin-top:12px;color:#65736b">🕙 Shop Open at 7:00 AM and Close at 10:30 PM</p>
+</div>
+</div>
+</section>
+
+<section id="storeinfo">
+<div class="container">
+<div class="section-title"><h2>Store Information</h2><p>Everything you need to know before visiting.</p></div>
+<div class="info-grid">
+<div class="info"><div class="info-icon">📍</div><h3>Location</h3><p>Thachempattu Road, Vanapuram, Tamil Nadu 606753</p></div>
+<div class="info"><div class="info-icon">🛒</div><h3>Store Type</h3><p>Grocery store for everyday shopping needs.</p></div>
+<div class="info"><div class="info-icon">🕙</div><h3>Opening Hours</h3><p>Every Day Shop Open at 7.00 AM to Close at 10:30 PM</p></div>
+<div class="info"><div class="info-icon">📹</div><h3>Camera Facilities</h3><p>Camera facilities available at the store.</p></div>
+</div>
+</div> 
+</section>
+
+<section class="products" id="products">
+<div class="container">
+<div class="section-title"><h2>Popular Grocery Categories</h2><p>Best Product For sample categories.</div>
+<div class="product-grid" id="productGrid"></div>
+</div>
+</section>
+
+<section class="reviews" id="reviews">
+<div class="container">
+<div class="section-title"><h2>Customer Reviews</h2><p>What customers say about CHELLAKANI STORE</p></div>
+<div class="review-grid">
+<div class="review"><div class="stars">★★★★★</div><p>“Quality product and Excellent Service”</p></div>
+<div class="review"><div class="stars">★★★★★</div><p>“Friendly Serve the Grocery things 😇”</p></div>
+</div>
+</div>
+</section>
+
+
+
+<section id="location">
+<div class="container">
+<div class="section-title"><h2>Visit CHELLAKANI STORE</h2><p>Find us on Thachempattu Road, Vanapuram.</p></div>
+<div class="location-card" >
+<div class="address">
+<h2>📍 Store Address</h2>
+<p>Chellakani Store, Thachempattu Road,<br> Vanapuram, Tiruvannamalai <br>Tamil Nadu 606753</p>
+<a class="btn btn-secondary" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Chellakani+Store%2C+Thachempattu+Road%2C+Vanapuram%2C+Tamil+Nadu+606753" Style="color:black">Open in Google Maps</a>
+</div>
+<div class="map">
+<div><div style="font-size:70px">📍</div><h2>4239+QM Vanapuram</h2><p>Thachempattu Road, Vanapuram</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" style="padding-top:20px">
+<div class="container">
+<div class="section-title"><h2>Contact & Visit</h2><p>Plan your grocery visit today.</p></div>
+<div class="actions" style="justify-content:center">
+<a class="btn btn-primary">📞Phone: 9626461930</a>
+<a class="btn btn-primary">📞Phone: 9047605607</a>
+</div>
+</div>
+</section>
+</main>
+
+
+
+<footer>
+<div class="container footer-grid">
+<div><strong>🛒 CHELLAKANI STORE</strong><br><span>Thachempattu Road, Vanapuram · Tamil Nadu 606753</span></div>
+<div>© <span id="year"></span> CHELLAKANI STORE</div>
+</div>
+</footer>
+
+<script>
+const products=[
+{name:"Rice & Grains",icon:"🍚",desc:"Rice, pulses and essential grains"},
+{name:"Cooking Essentials",icon:"🫙",desc:"Oil, spices and kitchen essentials"},
+{name:"Snacks",icon:"🍪",desc:"Biscuits, chocholate, chips and tasty snacks"},
+{name:"Beverages",icon:"🥤",desc:"Refreshing drinks and beverages"},
+{name:"Dairy Products",icon:"🥛",desc:"Milk and everyday dairy items"},
+{name:"Personal Care",icon:"🧴",desc:"Daily personal care essentials"},
+{name:"Household Items",icon:"🧹",desc:"Cleaning and household products"},
+{name:"Packaged Foods",icon:"🥫",desc:"Convenient packaged grocery items"},
+{name:"School Stationery",icon:"🎒",desc:"School bags and essential stationery"},
+{name:"Vegetables",icon:"🥕",desc:"Carrat, Beans, Brinjal and Etc..."},
+{name:"Electronics",icon:"💡",desc:"Torch Light, Bulb and Tubelight"},
+{name:"Cow Feed Food",icon:"🐄",desc:"Oil Cake, Black Gram Husk and Rice Bran"},
+
+];
+let cart=0;
+function renderProducts(list=products){
+const grid=document.getElementById("productGrid");
+grid.innerHTML=list.map((p,i)=>`<article class="product"><div class="product-img">${p.icon}</div><h3>${p.name}</h3><p>${p.desc}</p><div><span class="price"></div></article>`).join("");
+}
+function filterProducts(){
+const q=document.getElementById("search").value.toLowerCase();
+renderProducts(products.filter(p=>(p.name+" "+p.desc).toLowerCase().includes(q)));
+}
+
+function toggleMenu(){document.getElementById("navLinks").classList.toggle("open")}
+document.getElementById("year").textContent=new Date().getFullYear();
+renderProducts();
+</script>
+</body>
+</html>
